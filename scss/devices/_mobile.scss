@@ -273,7 +273,7 @@
   .contact {
     @include flexColumn(20px, unset, unset);
     color: white;
-    background-color: black;
+    background-color: rgb(34, 33, 33);
 
 
     h3 {
@@ -308,7 +308,7 @@
       height: 5vh;
       padding: 3%;
       border: 1px solid rgb(195, 192, 192);
-      background-color: black;
+      background-color: rgb(34, 33, 33);
     }
 
     textarea {
