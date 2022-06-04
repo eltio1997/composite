@@ -1,8 +1,339 @@
 @media (min-width: 300px) {
-  footer i {
+
+  header {
+    height: 70vh;
+    > aside {
+      background-image: url(/img/pic-10.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 50vh;
+      color: white;
+      text-transform: uppercase;
+      @include flexColumn(20px, center, center);
+      text-align: center;
+
+      > div {
+        @include flexColumn(20px, unset, unset);
+      }
+
+      h2 {
+        font-size: 23px;
+        font-weight: 300;
+      }
+
+      > a {
+        background-color: $defaultColor;
+        color: white;
+        text-decoration: none;
+        padding: 3%;
+        width: 20vh;
+        text-transform: uppercase;
+      }
+    }
+
+    > article {
+      display: flex;
+      justify-content: space-between;
+      padding: 3%;
+    }
+     h1 {
+      color: rgb(159, 157, 157);
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+
+  footer {
+    background-color: black;
+    height: 20vh;
+    @include flexColumn(10px, center, flex-end);
     padding: 2%;
+     i {
+      padding: 2%;
+      color: white;
+      border-radius: 50%;
+      font-size: 24px;
+    }
+    span{
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+    > div:nth-child(1) {
+      display: flex;
+      column-gap: 10px;
+      justify-content: center;
+      width: 100%;
+    }
   }
-  footer span {
-    text-align: center;
+
+  nav {
+    display: flex;
+    width: 50%;
+    > ul {
+      display: none;
+    }
+
   }
+
+  details {
+    width: 90%;
+    position: relative;
+    text-align: right;
+
+    a {
+      text-decoration: none;
+      color: $defaultColor;
+      padding: 5%;
+      width: 100%
+    }
+  }
+  summary {
+    padding: 3%;
+    font-size: 30px;
+    color: $defaultColor;
+  }
+  details > ul {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+
+    > li {
+      width: 100%;
+      border: 1px solid black;
+      list-style-type: none;
+      text-align: center;
+    }
+  }
+
+  .features {
+    @include flexColumn(40px, center, center);
+
+    i {
+      background-color: $defaultColor;
+      padding: 10%;
+      border-radius: 50%;
+      color: white;
+      font-size: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: royalblue;
+
+      > span {
+        color: rgb(131, 205, 21);
+      }
+    }
+
+    h3 {
+      font-weight: 300;
+    }
+
+    aside {
+      @include flexColumn(30px, center, center);
+
+      div {
+        @include flexColumn(10px, center, center);
+      }
+    }
+
+    article:nth-child(2){
+      @include flexColumn(20px, center, center);
+      text-align: center;
+    }
+  }
+
+  .about {
+    @include flexColumn(40px, unset, center);
+    height: 140vh;
+    h3 {
+      font-weight: 300;
+    }
+
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    > article:nth-child(2) {
+      @include flexColumn(20px, unset, center);
+
+      p {
+        font-size: 15px;
+        color: rgb(159, 157, 157);
+      }
+    }
+
+    .progress-bar {
+      color: rgb(114, 112, 112);
+      @include flexColumn(20px, unset, unset);
+
+      p {
+        width: 100%;
+        height: 1vh;
+        display: flex;
+        background-color: gainsboro;
+      }
+
+      %span-progress {
+        background-color: $defaultColor;
+      }
+
+      > article:nth-child(1) {
+         span {
+          @extend %span-progress;
+          width: 100%;
+        }
+      }
+      > article:nth-child(2) {
+         span {
+          @extend %span-progress;
+          width: 100%;
+        }
+      }
+      > article:nth-child(3) {
+         span {
+          @extend %span-progress;
+          width: 80%;
+        }
+      }
+      > article:nth-child(4) {
+         span {
+          @extend %span-progress;
+          width: 90%;
+        }
+      }
+    }
+
+    div{
+      width: 100%;
+      height: 4vh;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .meet {
+    @include flexColumn (40px, center,center);
+     figure {
+      width: 100%;
+      height: 60vh;
+      @include flexColumn(20px, center, center);
+    }
+
+    h3 {
+      color: $defaultColor;
+      text-align: center;
+    }
+
+
+     img {
+      width: 100%;
+      height: 40vh;
+    }
+  }
+
+  .port-folio {
+    @include flexColumn(30px,center, center);
+
+   aside:nth-child(1) {
+      @include PortfolioPic("/img/pic-00.jpg");
+    }
+   aside:nth-child(2) {
+      @include PortfolioPic("/img/pic-01.jpg");
+    }
+   aside:nth-child(3) {
+      @include PortfolioPic("/img/pic-02.jpg");
+    }
+   aside:nth-child(4) {
+      @include PortfolioPic("/img/pic-03.jpg");
+    }
+   aside:nth-child(5) {
+      @include PortfolioPic("/img/pic-04.jpg");
+    }
+   aside:nth-child(6) {
+      @include PortfolioPic("/img/pic-05.jpg");
+    }
+   aside:nth-child(7) {
+      @include PortfolioPic("/img/pic-06.jpg");
+    }
+   aside:nth-child(8) {
+      @include PortfolioPic("/img/pic-07.jpg");
+    }
+
+    > article:nth-child(2) {
+      @include flexColumn(10px, center, center);
+      width: 100%
+    }
+  }
+
+  .contact {
+    @include flexColumn(20px, unset, unset);
+    color: white;
+    background-color: black;
+
+
+    h3 {
+      font-size: 25px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    a, i {
+      color: $defaultColor;
+      text-decoration: none;
+    }
+
+    div {
+      display: flex;
+      column-gap: 10px;
+    }
+
+    address {
+      font-size: 14px;
+    }
+
+    form {
+      @include flexColumn(10px, left, center);
+      width: 100%;
+    }
+
+    input, textarea {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 5vh;
+      padding: 3%;
+      border: 1px solid rgb(195, 192, 192);
+      background-color: black;
+    }
+
+    textarea {
+      height: 20vh;
+    }
+
+    [type="submit"] {
+      color: gainsboro;
+      width: 60%;
+      height: 7vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > article:nth-child(1) {
+      @include flexColumn(10px, center, center);
+      height: 35vh;
+    }
+
+    > article:nth-child(2) {
+      @include flexColumn(20px, unset, unset);
+      height: 40vh;
+    }
+     
+  }
+
 }
