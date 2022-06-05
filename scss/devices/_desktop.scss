@@ -1,0 +1,98 @@
+@media (min-width: 1000px) {
+
+ 
+
+  header {
+    @include flexColumn (0);
+    height: 100vh;
+
+    h1 {
+      font-size: 40px;
+    }
+    aside {
+     height: 100%;
+    }
+
+    > article {
+      flex-direction: row;
+      align-items: flex-end;
+      width: 85%;
+    }
+
+    nav {
+      width: 60%;
+
+      li {
+        width: fit-content;
+      }
+    }
+  }
+
+  .features {
+    height: 50vh;
+    row-gap: 60px;
+    aside {
+      width: 20%;
+    }
+
+    > article:nth-child(1) {
+      row-gap: 20px;
+      p {
+        width: 50%;
+      }
+    }
+  }
+
+  .about {
+    > article:nth-child(1) {
+      p {
+        width: 50%;
+      }
+    }
+
+    > article:nth-child(2) {
+      row-gap: 10px;
+    }
+
+    .progress-bar p {
+      height: 1vh;
+    }
+  }
+
+  .meet {
+    > article:nth-child(1) {
+      p {
+        width: 50%;
+      }
+    }
+    row-gap: 70px;
+    figure {
+      width: 24%;
+    }
+    
+  }
+
+  .port-folio {
+    height: 80vh;
+    article:nth-child(1) {
+      p {
+        width: 50%;
+      }
+    }
+
+    aside:nth-child(odd),
+    aside:nth-child(even) {
+      width: 24%;
+    }
+  }
+
+  .contact {
+    > article:nth-child(1) {
+      height: 30vh;
+      p {
+        width: 50%;
+      }
+    }
+    
+  }
+}
